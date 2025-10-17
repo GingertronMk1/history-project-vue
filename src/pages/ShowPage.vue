@@ -2,10 +2,11 @@
 import { useRoute } from 'vue-router'
 import ShowData from '@/shows.json'
 import { computed } from 'vue'
+import type { Show } from '@/types.ts';
 
 const routeParams = computed(() => useRoute().params)
-const shows = computed(() => Object.values(ShowData))
-const thisShow = computed(() =>
+const shows = computed<Show[]>(() => Object.values(ShowData) as Show[])
+const thisShow = computed<Show|undefined>(() =>
   shows.value.find((s) => s.slug === routeParams.value.slug && s.year === routeParams.value.year),
 )
 </script>
