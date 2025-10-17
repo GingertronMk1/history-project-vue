@@ -14,7 +14,7 @@ const router = createRouter({
       path: '/shows/:year/:slug',
       component: ShowPage,
       name: 'showPage',
-    }
+    },
   ],
 })
 
