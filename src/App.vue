@@ -3,7 +3,7 @@
     <div class="container flex flex-row items-center mx-auto">
       <h1 class="text-4xl">NNT History Project</h1>
       <div class="flex flex-row gap-4 ms-auto">
-        <RouterLink :to="{ name: 'yearsPage' }">Years</RouterLink>
+        <RouterLink :to="{ name: 'allYearsPage' }">Years</RouterLink>
       </div>
     </div>
   </header>
