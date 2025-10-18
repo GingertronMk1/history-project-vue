@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { computed } from 'vue'
-import { ALL_SHOWS } from '@/data/shows.ts'
+import { getAllShowsMatchingPredicate } from '@/data/shows.ts'
 
 const routeParams = computed(() => useRoute().params)
 const thisShow = computed<Show | undefined>(() =>
-  ALL_SHOWS.find((s) => s.slug === routeParams.value.slug && s.year === routeParams.value.year),
+  getAllShowsMatchingPredicate((s) => s.slug === routeParams.value.slug && s.year === routeParams.value.year),
 )
 </script>
 

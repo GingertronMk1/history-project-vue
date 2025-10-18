@@ -77,5 +77,5 @@ export type Show = {
   trivia?: Trivia[]
   venue?: string
   venue_sort?: number
-  year?: Date
+  year: string
 } & Record<string, number | string>

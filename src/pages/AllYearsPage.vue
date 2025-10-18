@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { ALL_SHOWS } from '@/data/shows.ts'
+import { getAllShowAttributes } from '@/data/shows.ts'
 
 const years = computed(() => {
-  const allYears = new Set(ALL_SHOWS.map(({ year }) => year))
+  const allYears = getAllShowAttributes('year');
   return Object.groupBy(allYears, (year: string) => year.slice(0, 1))
 })
 </script>
